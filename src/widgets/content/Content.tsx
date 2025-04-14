@@ -11,6 +11,7 @@ export const Content = () => {
         height: '100%',
         boxShadow: '4px 0 16px 0 rgba(0, 0, 0, 0.08)',
         padding: '20px',
+        backgroundColor: '#fff, rgba(0, 0, 0, 0.03)',
       }}
     >
       <Outlet />
