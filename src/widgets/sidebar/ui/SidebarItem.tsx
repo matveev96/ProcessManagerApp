@@ -7,8 +7,16 @@ import Settings from '../../../shared/assets/icons/common/Settings.svg'
 import Company from '../../../shared/assets/icons/common/Company.svg'
 import Deceased from '../../../shared/assets/icons/common/Deceased.svg'
 import { Border } from '../../../shared/ui/border/Border.tsx'
+import { setModalLogin } from '../../../app/store/appSlice.ts'
+import { useAppDispatch } from '../../../app/store/hooks/useAppDispatch.ts'
 
 export const SidebarItem = () => {
+  const dispatch = useAppDispatch()
+
+  const SignOutHandler = () => {
+    dispatch(setModalLogin({ modalLogin: true }))
+  }
+
   return (
     <AppBar position={'fixed'} sx={{ height: '100%', width: '48px', left: 0 }}>
       <Toolbar
@@ -22,8 +30,8 @@ export const SidebarItem = () => {
       >
         <img src={logo} alt="logo" />
         <Box sx={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          <CustomIconButton icon={Company} ariaLabel={'Company'} />
-          <CustomIconButton icon={Deceased} ariaLabel={'Deceased'} />
+          <CustomIconButton variant={'text'} icon={Company} ariaLabel={'Company'} />
+          <CustomIconButton variant={'text'} icon={Deceased} ariaLabel={'Deceased'} />
         </Box>
 
         <Box
@@ -37,8 +45,8 @@ export const SidebarItem = () => {
           }}
         >
           <Border width={'50%'} color={'rgba(255, 255, 255, 0.2)'} />
-          <CustomIconButton icon={Settings} ariaLabel={'Settings'} />
-          <CustomIconButton icon={SignOut} ariaLabel={'SignOut'} />
+          <CustomIconButton variant={'text'} icon={Settings} ariaLabel={'Settings'} />
+          <CustomIconButton variant={'text'} onClick={SignOutHandler} icon={SignOut} ariaLabel={'SignOut'} />
         </Box>
       </Toolbar>
     </AppBar>
