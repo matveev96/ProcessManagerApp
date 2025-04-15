@@ -1,16 +1,21 @@
 import s from './link.module.scss'
 import { NavLink } from 'react-router-dom'
 
-type LinkProps = {
+export type Name = 'Organizations' | 'Contractors' | 'Clients'
+
+export type LinkProps = {
   path: string
-  name: string
-  icon: string
+  name?: Name
+  icon?: string
+  onClick?: () => void
+  className?: string
 }
 
 export const CustomLink = (props: LinkProps) => {
-  const { name, path, icon } = props
+  const { name, path, icon, onClick, className } = props
+
   return (
-    <NavLink className={s.linkButton} to={path}>
+    <NavLink onClick={onClick} className={`${s.linkButton} ${className}`} to={path}>
       <img src={icon} alt={name} />
       <span className={s.name}>{name}</span>
     </NavLink>
