@@ -30,8 +30,8 @@ export const SidebarItem = () => {
       >
         <img src={logo} alt="logo" />
         <Box sx={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          <CustomIconButton variant={'text'} icon={Company} ariaLabel={'Company'} />
-          <CustomIconButton variant={'text'} icon={Deceased} ariaLabel={'Deceased'} />
+          <CustomIconButton color={'secondary'} icon={Company} ariaLabel={'Company'} />
+          <CustomIconButton color={'secondary'} icon={Deceased} ariaLabel={'Deceased'} />
         </Box>
 
         <Box
@@ -45,8 +45,8 @@ export const SidebarItem = () => {
           }}
         >
           <Border width={'50%'} color={'rgba(255, 255, 255, 0.2)'} />
-          <CustomIconButton variant={'text'} icon={Settings} ariaLabel={'Settings'} />
-          <CustomIconButton variant={'text'} onClick={SignOutHandler} icon={SignOut} ariaLabel={'SignOut'} />
+          <CustomIconButton color={'secondary'} icon={Settings} ariaLabel={'Settings'} />
+          <CustomIconButton color={'secondary'} onClick={SignOutHandler} icon={SignOut} ariaLabel={'SignOut'} />
         </Box>
       </Toolbar>
     </AppBar>
