@@ -3,7 +3,7 @@ import { baseApi } from '../../../app/store/baseApi.ts'
 export const authApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     login: build.mutation<any, { username: string }>({
-      query: (username) => `auth?user=${username}`,
+      query: ({ username }) => `auth?user=${username}`,
       async onQueryStarted(arg, { queryFulfilled }) {
         try {
           const { meta } = await queryFulfilled
