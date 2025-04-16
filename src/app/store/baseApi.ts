@@ -6,7 +6,8 @@ export const baseApi = createApi({
     const result = await fetchBaseQuery({
       baseUrl: 'https://test-task-api.allfuneral.com/',
       prepareHeaders: (headers) => {
-        headers.set('Authorization', `Bearer ${localStorage.getItem('token')}`)
+        headers.set('Authorization', `${localStorage.getItem('token')}`)
+        headers.set('Content-Type', 'application/json')
       },
     })(args, api, extraOptions)
 
