@@ -4,17 +4,18 @@ import { Box } from '@mui/material'
 export const Content = () => {
   return (
     <Box
-      position={'fixed'}
+      position={'absolute'}
       sx={{
-        left: 298,
-        width: '100%',
+        left: '20%',
+        width: '80%',
         height: '100%',
-        boxShadow: '4px 0 16px 0 rgba(0, 0, 0, 0.08)',
         padding: '20px',
         backgroundColor: '#fff, rgba(0, 0, 0, 0.03)',
       }}
     >
-      <Outlet />
+      <Box sx={{ width: '80%', margin: '0 auto' }}>
+        <Outlet />
+      </Box>
     </Box>
   )
 }

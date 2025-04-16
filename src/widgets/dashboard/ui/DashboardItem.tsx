@@ -9,8 +9,8 @@ export const DashboardItem = () => {
       position={'fixed'}
       sx={{
         height: '100%',
-        width: '250px',
-        left: 48,
+        width: '17%',
+        left: '3%',
         boxShadow: '4px 0 16px 0 rgba(0, 0, 0, 0.08)',
         padding: '20px',
         backgroundColor: '#fff',
