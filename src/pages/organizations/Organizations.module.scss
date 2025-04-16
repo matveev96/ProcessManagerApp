@@ -1,0 +1,54 @@
+.containerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerHeaderTitle {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.containerHeaderButtons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.listItemTitle {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.5);
+  flex-basis: 25%;
+}
+
+.listItemDate {
+  display: flex;
+  gap: 12px;
+}
+
+.line {
+  color: rgba(0, 0, 0, 0.3);
+}
