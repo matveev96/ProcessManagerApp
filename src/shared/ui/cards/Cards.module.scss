@@ -17,6 +17,58 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-.cardBody {
+.photo {
+  border-radius: 8px;
+  width: 144px;
+  height: 108px;
+}
 
+.photosContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.photoWrapper {
+ position: relative;
+}
+
+.photoIcon {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.listItemTitle {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.5);
+  flex-basis: 25%;
+}
+
+.listItemDate {
+  display: flex;
+  gap: 12px;
+}
+
+.line {
+  color: rgba(0, 0, 0, 0.3);
 }
