@@ -1,4 +1,4 @@
-export const formatDate = (input: string | undefined) => {
+export const dateFormat = (input: string | undefined) => {
   const formatInput = input ?? 'yyyy-mm-dd'
   //Можно с использованием объекта Date или при помощи метода split
   // const date = new Date(formatInput)
