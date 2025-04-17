@@ -10,7 +10,7 @@ type Photos = {
   createdAt: string
 }
 
-export type OrgResponse = {
+export type CompaniesResponse = {
   id: string
   contactId: string
   name: string
@@ -20,6 +20,16 @@ export type OrgResponse = {
   type: Array<string>
   status: string
   photos: Photos[]
+  createdAt: string
+  updatedAt: string
+}
+
+export type ContactsResponse = {
+  id: string
+  lastname: string
+  firstname: string
+  phone: string
+  email: string
   createdAt: string
   updatedAt: string
 }
