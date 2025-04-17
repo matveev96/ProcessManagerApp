@@ -1,14 +1,7 @@
 import { Paper } from '@mui/material'
 import s from './Cards.module.scss'
 import { CustomButton } from '../buttons/CustomButton.tsx'
-import type { ReactNode } from 'react'
-
-export type CardProps = {
-  title: string
-  buttonIcon: string
-  buttonText: string
-  children?: ReactNode
-}
+import type { CardProps } from './type.ts'
 
 export const Card = (props: CardProps) => {
   const { title, buttonIcon, buttonText, children } = props
