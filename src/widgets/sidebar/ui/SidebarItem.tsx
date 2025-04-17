@@ -18,7 +18,7 @@ export const SidebarItem = () => {
   }
 
   return (
-    <AppBar position={'fixed'} sx={{ height: '100%', width: '3%', left: 0 }}>
+    <AppBar position={'fixed'} sx={{ height: '100%', width: '3%', left: 0, zIndex: 0 }}>
       <Toolbar
         sx={{
           display: 'flex',
