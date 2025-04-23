@@ -17,6 +17,11 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
+.cardHeaderButtonContainer {
+  display: flex;
+  gap: 12px;
+}
+
 .photo {
   border-radius: 8px;
   width: 144px;
@@ -55,6 +60,11 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
+.listEditItem {
+  display: flex;
+  align-items: center;
+}
+
 .listItemTitle {
   font-weight: 400;
   font-size: 13px;
@@ -62,6 +72,12 @@
   letter-spacing: 0.02em;
   color: rgba(0, 0, 0, 0.5);
   flex-basis: 25%;
+}
+
+.listItemEditDate {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  margin: 12px;
 }
 
 .listItemDate {
