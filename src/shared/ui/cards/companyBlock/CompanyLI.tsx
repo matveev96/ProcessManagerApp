@@ -1,5 +1,5 @@
 import s from '../Cards.module.scss'
-import { useGetCompaniesQuery } from '../../../../pages/organizations/api/orgApi.ts'
+import { useGetCompaniesQuery } from '../../../../pages/organizations/api/companiesApi.ts'
 
 export const CompanyLI = () => {
   const { data } = useGetCompaniesQuery({ id: '12' })
