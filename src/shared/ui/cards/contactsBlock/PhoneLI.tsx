@@ -1,6 +1,6 @@
-import { useGetContactsQuery } from '../../../../pages/organizations/api/orgApi.ts'
 import s from '../Cards.module.scss'
 import { phoneFormat } from '../../../lib/phone/phoneFormat.ts'
+import { useGetContactsQuery } from '../../../../pages/organizations/api/contactsApi.ts'
 
 export const PhoneLI = () => {
   const { data } = useGetContactsQuery({ id: '16' })
