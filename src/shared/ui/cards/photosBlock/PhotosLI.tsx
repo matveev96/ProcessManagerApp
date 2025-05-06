@@ -1,4 +1,4 @@
-import { useGetCompaniesQuery } from '../../../../pages/organizations/api/orgApi.ts'
+import { useGetCompaniesQuery } from '../../../../pages/organizations/api/companiesApi.ts'
 import s from '../Cards.module.scss'
 import trash from '../../../assets/icons/common/Trash.svg'
 import { CustomIconButton } from '../../buttons/CustomIconButton.tsx'
@@ -11,7 +11,13 @@ export const PhotosLi = () => {
       <div className={s.photoWrapper}>
         <img className={s.photo} src={photo.filepath} alt="" />
         <div className={s.photoIcon}>
-          <CustomIconButton icon={trash} color={'primary'} backgroundColor={'#3b3b3b'} />
+          <CustomIconButton
+            ariaLabel={'trash'}
+            icon={trash}
+            color={'secondary'}
+            backgroundColor={'#3b3b3b'}
+            hoverColor={'#9981FF'}
+          />
         </div>
       </div>
     </li>
