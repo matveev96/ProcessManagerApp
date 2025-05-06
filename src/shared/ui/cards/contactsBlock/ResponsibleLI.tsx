@@ -1,5 +1,5 @@
 import s from '../Cards.module.scss'
-import { useGetContactsQuery } from '../../../../pages/organizations/api/orgApi.ts'
+import { useGetContactsQuery } from '../../../../pages/organizations/api/contactsApi.ts'
 
 export const ResponsibleLI = () => {
   const { data } = useGetContactsQuery({ id: '16' })
