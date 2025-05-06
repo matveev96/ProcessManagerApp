@@ -1,5 +1,5 @@
-import { useGetContactsQuery } from '../../../../pages/organizations/api/orgApi.ts'
 import s from '../Cards.module.scss'
+import { useGetContactsQuery } from '../../../../pages/organizations/api/contactsApi.ts'
 
 export const EmailLI = () => {
   const { data } = useGetContactsQuery({ id: '16' })
