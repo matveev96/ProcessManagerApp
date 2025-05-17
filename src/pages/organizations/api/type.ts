@@ -24,6 +24,8 @@ export type CompaniesResponse = {
   updatedAt: string
 }
 
+export type CompaniesPayload = Pick<CompaniesResponse, 'name' | 'shortName' | 'businessEntity' | 'contract' | 'type'>
+
 export type ContactsResponse = {
   id: string
   lastname: string
