@@ -11,6 +11,7 @@ export const PATH = {
   Clients: '/clients',
   Login: '/login',
   MAIN_PAGE: '/',
+  StartGH_Pages: '/ProcessManagerApp/',
 } as const
 
 const publicRoutes: RouteObject[] = [
@@ -33,6 +34,10 @@ const publicRoutes: RouteObject[] = [
   {
     path: PATH.MAIN_PAGE,
     element: <Navigate to={PATH.Organizations} />,
+  },
+  {
+    path: PATH.StartGH_Pages,
+    element: <Navigate to={PATH.Login} />,
   },
 ]
 
