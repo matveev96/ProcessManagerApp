@@ -6,10 +6,11 @@ type Props = {
   onClick?: () => void
   color: 'primary' | 'secondary'
   backgroundColor?: string
+  hoverColor?: string
 }
 
 export const CustomIconButton = (props: Props) => {
-  const { icon, ariaLabel, onClick, color, backgroundColor } = props
+  const { icon, ariaLabel, onClick, color, backgroundColor, hoverColor } = props
 
   return (
     <IconButton
@@ -17,7 +18,13 @@ export const CustomIconButton = (props: Props) => {
       onClick={onClick}
       color={color}
       aria-label={ariaLabel}
-      sx={{ borderRadius: '10px', backgroundColor }}
+      sx={{
+        borderRadius: '10px',
+        backgroundColor,
+        '&:hover': {
+          backgroundColor: hoverColor,
+        },
+      }}
     >
       <img src={icon} alt={ariaLabel} />
     </IconButton>
