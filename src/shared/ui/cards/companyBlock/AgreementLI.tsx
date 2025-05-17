@@ -1,19 +1,41 @@
 import s from '../Cards.module.scss'
-import { useGetCompaniesQuery } from '../../../../pages/organizations/api/orgApi.ts'
-import { dateFormat } from '../../../lib/date/dateFormat.ts'
+import { useAppSelector } from '../../../../app/store/hooks/useAppSelector.ts'
+import { selectIsEditCompanyCard } from '../../../../app/store/appSlice.ts'
+import { TextField } from '@mui/material'
+import type { ChangeEvent } from 'react'
 
-export const AgreementLI = () => {
-  const { data } = useGetCompaniesQuery({ id: '12' })
-  const date = dateFormat(data?.contract.issue_date.slice(0, 10))
-  const number = data?.contract.no ?? ''
+type AgreementLIProps = {
+  onChange: (e: ChangeEvent<HTMLInputElement>, name: string) => void
+  noValue: string
+  dateValue: string
+}
+
+export const AgreementLI = (props: AgreementLIProps) => {
+  const { onChange, noValue, dateValue } = props
+  const editCompanyCard = useAppSelector(selectIsEditCompanyCard)
+
   return (
-    <li className={s.listItem}>
-      <span className={s.listItemTitle}>Agreement:</span>
-      <div className={s.listItemDate}>
-        {number}
-        <span className={s.line}>/</span>
-        {date}
-      </div>
-    </li>
+    <>
+      {!editCompanyCard ? (
+        <li className={s.listItem}>
+          <span className={s.listItemTitle}>Agreement:</span>
+          <div className={s.listItemDate}>
+            {noValue}
+            <span className={s.line}>/</span>
+            {dateValue}
+          </div>
+        </li>
+      ) : (
+        <li className={s.listEditItem}>
+          <span className={s.listItemTitle}>Agreement number:</span>
+          <TextField value={noValue} onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e, 'no')}></TextField>
+          <span className={s.listItemEditDate}>Date:</span>
+          <TextField
+            value={dateValue}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e, 'issue_date')}
+          ></TextField>
+        </li>
+      )}
+    </>
   )
 }
