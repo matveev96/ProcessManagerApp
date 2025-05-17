@@ -4,7 +4,7 @@ export const authApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     login: build.mutation<any, { username: string }>({
       query: ({ username }) => `auth?user=${username}`,
-      async onQueryStarted(arg, { queryFulfilled }) {
+      async onQueryStarted(_, { queryFulfilled }) {
         try {
           const { meta } = await queryFulfilled
           const headers = meta?.response?.headers
