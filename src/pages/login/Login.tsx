@@ -24,11 +24,11 @@ export const Login = () => {
   const onSubmit = () => {
     isLoggedIn
       ? logout()
-      : login({ username: 'USERNAME' }).then((res) => {
+      : login({ username: 'USERNAME' }).then(() => {
           dispatch(setIsLoggedIn({ isLoggedIn: true }))
           dispatch(setModalLogin({ modalLogin: false }))
-          navigate(PATH.Organizations)
         })
+    navigate(PATH.Organizations)
   }
 
   return (
