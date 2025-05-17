@@ -12,4 +12,17 @@ export const appTheme = createTheme({
   typography: {
     fontFamily: "'Poppins', sans-serif",
   },
+  components: {
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px',
+          fontSize: '13px',
+        },
+        input: {
+          padding: '10px 12px',
+        },
+      },
+    },
+  },
 })
